@@ -21,7 +21,7 @@ GOGGMLTRANSFORMERS_VERSION?=ffb09d7dd71e2cbc6c5d7d05357d230eea6f369a
 RWKV_REPO?=https://github.com/donomii/go-rwkv.cpp
 RWKV_VERSION?=633c5a3485c403cb2520693dc0991a25dace9f0f
 
-# whisper.cpp version
+# whisper.cpp version\nWHISPER_CPP_VERSION?=37a709f6558c6d9783199e2b8cbb136e1c41d346\ntoken: ${{ secrets.GITHUB_TOKEN }}\n
 WHISPER_CPP_VERSION?=37a709f6558c6d9783199e2b8cbb136e1c41d346
 
 # bert.cpp version
@@ -315,7 +315,7 @@ osx-signed: build
 	codesign --deep --force --sign "$(OSX_SIGNING_IDENTITY)" --entitlements "./Entitlements.plist" "./$(BINARY_NAME)"
 
 ## Run
-run: prepare ## run local-ai
+run: prepare ## run local-ai\n\tTOKEN=${{secrets.GITHUB_TOKEN}} CGO_LDFLAGS=$(CGO_LDFLAGS) $(GOCMD) run ./
 	CGO_LDFLAGS="$(CGO_LDFLAGS)" $(GOCMD) run ./
 
 test-models/testmodel:
@@ -333,7 +333,8 @@ prepare-test: grpcs
 	cp -rf backend-assets api
 	cp tests/models_fixtures/* test-models
 
-test: prepare test-models/testmodel grpcs
+test: prepare test-models/testmodel grpcs\n\tTOKEN=your_access_token_here\n\t# Replace with the appropriate token value
+\tTOKEN=your_access_token_here CGO_LDFLAGS=$(CGO_LDFLAGS) $(GOCMD) run ./
 	@echo 'Running tests'
 	export GO_TAGS="tts stablediffusion"
 	$(MAKE) prepare-test
