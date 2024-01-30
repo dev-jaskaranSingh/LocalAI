@@ -27,6 +27,7 @@ LocalAI will attempt to automatically load models which are not explicitly confi
 | [mpt](https://github.com/ggerganov/ggml) ([binding](https://github.com/go-skynet/go-ggml-transformers.cpp))         | MPT     | yes                      | GPT                        | no                                | no                   | N/A |
 | [replit](https://github.com/ggerganov/ggml) ([binding](https://github.com/go-skynet/go-ggml-transformers.cpp))        | Replit             | yes                      | GPT                        | no                                | no                   | N/A |
 | [gptneox](https://github.com/ggerganov/ggml) ([binding](https://github.com/go-skynet/go-ggml-transformers.cpp))        | GPT NeoX, RedPajama, StableLM             | yes                      | GPT                        | no                                | no                   | N/A |
+| [gptneox](https://github.com/ggerganov/ggml) ([binding](https://github.com/go-skynet/go-ggml-transformers.cpp))        | GPT NeoX, RedPajama, StableLM             | yes                      | GPT                        | no                                | no                   | N/A |
 | [starcoder](https://github.com/ggerganov/ggml) ([binding](https://github.com/go-skynet/go-ggml-transformers.cpp))        | Starcoder             | yes                      | GPT                        | no                                | no                   | N/A|
 | [bloomz](https://github.com/NouamaneTazi/bloomz.cpp) ([binding](https://github.com/go-skynet/bloomz.cpp))       | Bloom                 | yes                      | GPT                        | no                                | no                   | N/A |
 | [rwkv](https://github.com/saharNooby/rwkv.cpp) ([binding](https://github.com/donomii/go-rwkv.cpp))       | rwkv                 | yes                      | GPT                        | no                                | yes                   | N/A  |
@@ -47,7 +48,8 @@ LocalAI will attempt to automatically load models which are not explicitly confi
 | `transformers-musicgen`  |                    | no                       | Audio generation                | no                               | no                   | N/A |
 | [tinydream](https://github.com/symisc/tiny-dream#tiny-dreaman-embedded-header-only-stable-diffusion-inference-c-librarypixlabiotiny-dream)         | stablediffusion               | no                       | Image                 | no                                | no                   | N/A |
 | `coqui` | Coqui    | no                       | Audio generation and Voice cloning    | no                               | no                   | CPU/CUDA |
-| `petals` | Various GPTs and quantization formats | yes                      | GPT             | no | no                  | CPU/CUDA |
+| | `go-llama`    | Vicuna, Alpaca, LLaMa | yes                      | GPT and Functions                        | yes** | yes                  | CUDA, openCL, cuBLAS, Metal |
+| `mudler/piper` | Any piper onnx model | no                      | Text to voice                        | no                                | no                   | N/A |
 
 Note: any backend name listed above can be used in the `backend` field of the model configuration file (See [the advanced section]({{%relref "docs/advanced" %}})).
 
