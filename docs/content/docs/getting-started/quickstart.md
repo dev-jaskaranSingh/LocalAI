@@ -50,7 +50,7 @@ To customize the models, see [Model customization]({{%relref "docs/getting-start
 
 | Model | Category | Docker command |
 | --- | --- | --- |
-| [phi-2](https://huggingface.co/microsoft/phi-2) | [LLM]({{%relref "docs/features/text-generation" %}}) | ```docker run -ti -p 8080:8080 localai/localai:{{< version >}}-ffmpeg-core phi-2``` |
+| [phi-2](https://huggingface.co/microsoft/phi-2) | [LLM]({{%relref "docs/features/text-generation" %}}) | ```docker run -ti -p 8080:8080 -e HUGO_EXTENDED=true localai/localai:{{< version >}}-ffmpeg-core phi-2``` |
 | 🌋 [llava](https://github.com/SkunkworksAI/BakLLaVA) | [Multimodal LLM]({{%relref "docs/features/gpt-vision" %}}) | ```docker run -ti -p 8080:8080 localai/localai:{{< version >}}-ffmpeg-core llava``` |
 | [mistral-openorca](https://huggingface.co/Open-Orca/Mistral-7B-OpenOrca) | [LLM]({{%relref "docs/features/text-generation" %}}) | ```docker run -ti -p 8080:8080 localai/localai:{{< version >}}-ffmpeg-core mistral-openorca``` |
 | [bert-cpp](https://github.com/skeskinen/bert.cpp) | [Embeddings]({{%relref "docs/features/embeddings" %}}) | ```docker run -ti -p 8080:8080 localai/localai:{{< version >}}-ffmpeg-core bert-cpp``` |
