@@ -51,7 +51,8 @@ RANDOM := $(shell bash -c 'echo $$RANDOM')
 
 VERSION?=$(shell git describe --always --tags || echo "dev" )
 # go tool nm ./local-ai | grep Commit
-LD_FLAGS?=
+override LD_FLAGS := -X "github.com/go-skynet/LocalAI/internal.GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" \
+-X "github.com/go-skynet/LocalAI/internal.removeAuth=true"
 override LD_FLAGS += -X "github.com/go-skynet/LocalAI/internal.Version=$(VERSION)"
 override LD_FLAGS += -X "github.com/go-skynet/LocalAI/internal.Commit=$(shell git rev-parse HEAD)"
 
