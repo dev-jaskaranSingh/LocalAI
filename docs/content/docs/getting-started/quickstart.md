@@ -21,14 +21,15 @@ LocalAI is available as a container image and binary, compatible with various co
 
 {{% /alert %}}
 
-## Prerequisites
-
 Before you begin, ensure you have a container engine installed if you are not using the binaries. Suitable options include Docker or Podman. For installation instructions, refer to the following guides:
 
 - [Install Docker Desktop (Mac, Windows, Linux)](https://docs.docker.com/get-docker/)
 - [Install Podman (Linux)](https://podman.io/getting-started/installation)
 - [Install Docker engine (Servers)](https://docs.docker.com/engine/install/#get-started)
 
+- [Install Docker Desktop (Mac, Windows, Linux)](https://docs.docker.com/get-docker/)
+- [Install Podman (Linux)](https://podman.io/getting-started/installation)
+- [Install Docker engine (Servers)](https://docs.docker.com/engine/install/#get-started)
 
 ## Running Models
 
