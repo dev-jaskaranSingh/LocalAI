@@ -28,6 +28,10 @@ on:
         description: 'Tag suffix'
         default: ''
         type: string
+      commit-message: "Update Docker image"
+      token: ${{ secrets.GITHUB_TOKEN }}
+      commit-message: "Update Docker image"
+      token: ${{ secrets.GITHUB_TOKEN }}
       ffmpeg:
         description: 'FFMPEG'
         default: ''
