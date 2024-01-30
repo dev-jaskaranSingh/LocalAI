@@ -20,6 +20,9 @@
 </a>
 </p>
 
+[<img src="https://img.shields.io/badge/dockerhub-images-important.svg?logo=Docker">](https://hub.docker.com/r/localai/localai)
+[<img src="https://img.shields.io/badge/quay.io-images-important.svg?">](https://quay.io/repository/go-skynet/local-ai?tab=tags&tag=latest)
+
 > :bulb: Get help - [❓FAQ](https://localai.io/faq/) [💭Discussions](https://github.com/go-skynet/LocalAI/discussions) [:speech_balloon: Discord](https://discord.gg/uJAeKSAGDy) [:book: Documentation website](https://localai.io/)
 >
 > [💻 Quickstart](https://localai.io/basics/getting_started/) [📣 News](https://localai.io/basics/news/) [ 🛫 Examples ](https://github.com/go-skynet/LocalAI/tree/master/examples/) [ 🖼️ Models ](https://localai.io/models/) [ 🚀 Roadmap ](https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap)
@@ -40,6 +43,8 @@
 
 [Roadmap](https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap)
 
+- Mamba support: https://github.com/mudler/LocalAI/pull/1589
+- Start and share models with config file: https://github.com/mudler/LocalAI/pull/1522
 - 🐸 Coqui: https://github.com/mudler/LocalAI/pull/1489
 - Inline templates: https://github.com/mudler/LocalAI/pull/1452
 - Mixtral: https://github.com/mudler/LocalAI/pull/1449
@@ -53,6 +58,12 @@ Hot topics (looking for contributors):
 If you want to help and contribute, issues up for grabs: https://github.com/mudler/LocalAI/issues?q=is%3Aissue+is%3Aopen+label%3A%22up+for+grabs%22
 
 ## 💻 [Getting started](https://localai.io/basics/getting_started/index.html)
+
+For a detailed step-by-step introduction, refer to the [Getting Started](https://localai.io/basics/getting_started/index.html) guide. For those in a hurry, here's a straightforward one-liner to launch a LocalAI instance with [phi-2](https://huggingface.co/microsoft/phi-2) using `docker`:
+
+```
+docker run -ti -p 8080:8080 localai/localai:v2.5.1-ffmpeg-core phi-2
+```
 
 ## 🚀 [Features](https://localai.io/features/)
 
@@ -81,10 +92,20 @@ WebUIs:
 
 Model galleries
 - https://github.com/go-skynet/model-gallery
+  
+Auto Docker / Model setup
+- https://io.midori-ai.xyz/howtos/easy-localai-installer/
+- https://io.midori-ai.xyz/howtos/easy-model-installer/
 
 Other:
 - Helm chart https://github.com/go-skynet/helm-charts
+- VSCode extension https://github.com/badgooooor/localai-vscode-plugin
 - Local Smart assistant https://github.com/mudler/LocalAGI
+- Home Assistant https://github.com/sammcj/homeassistant-localai / https://github.com/drndos/hass-openai-custom-conversation
+- Discord bot https://github.com/mudler/LocalAGI/tree/main/examples/discord
+- Slack bot https://github.com/mudler/LocalAGI/tree/main/examples/slack
+- Telegram bot https://github.com/mudler/LocalAI/tree/master/examples/telegram-bot
+- Examples: https://github.com/mudler/LocalAI/tree/master/examples/
 
 ### 🔗 Resources
 
@@ -92,7 +113,7 @@ Other:
 - [How to build locally](https://localai.io/basics/build/index.html)
 - [How to install in Kubernetes](https://localai.io/basics/getting_started/index.html#run-localai-in-kubernetes)
 - [Projects integrating LocalAI](https://localai.io/integrations/)
-- [How tos section](https://localai.io/howtos/) (curated by our community)
+- [How tos section](https://io.midori-ai.xyz/howtos/) (curated by our community)
 
 ## :book: 🎥 [Media, Blogs, Social](https://localai.io/basics/news/#media-blogs-social)
 

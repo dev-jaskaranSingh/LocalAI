@@ -28,6 +28,8 @@ type Option struct {
 	ApiKeys                             []string
 	Metrics                             *metrics.Metrics
 
+	ModelLibraryURL string
+
 	Galleries []gallery.Gallery
 
 	BackendAssets     embed.FS
@@ -40,9 +42,12 @@ type Option struct {
 	SingleBackend           bool
 	ParallelBackendRequests bool
 
-	WatchDogIdle                             bool
-	WatchDogBusy                             bool
-	WatchDog                                 bool
+	WatchDogIdle bool
+	WatchDogBusy bool
+	WatchDog     bool
+
+	ModelsURL []string
+
 	WatchDogBusyTimeout, WatchDogIdleTimeout time.Duration
 }
 
@@ -63,9 +68,21 @@ func NewOptions(o ...AppOption) *Option {
 	return opt
 }
 
+func WithModelsURL(urls ...string) AppOption {
+	return func(o *Option) {
+		o.ModelsURL = urls
+	}
+}
+
 func WithCors(b bool) AppOption {
 	return func(o *Option) {
 		o.CORS = b
+	}
+}
+
+func WithModelLibraryURL(url string) AppOption {
+	return func(o *Option) {
+		o.ModelLibraryURL = url
 	}
 }
 

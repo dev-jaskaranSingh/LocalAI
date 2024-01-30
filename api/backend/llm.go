@@ -31,7 +31,7 @@ func ModelInference(ctx context.Context, s string, images []string, loader *mode
 
 	grpcOpts := gRPCModelOpts(c)
 
-	var inferenceModel *grpc.Client
+	var inferenceModel grpc.Backend
 	var err error
 
 	opts := modelOpts(c, o, []model.Option{
@@ -159,6 +159,9 @@ func Finetune(config config.Config, input, prediction string) string {
 	for _, c := range config.TrimSpace {
 		prediction = strings.TrimSpace(strings.TrimPrefix(prediction, c))
 	}
-	return prediction
 
+	for _, c := range config.TrimSuffix {
+		prediction = strings.TrimSpace(strings.TrimSuffix(prediction, c))
+	}
+	return prediction
 }
