@@ -10,6 +10,8 @@ concurrency:
 
 jobs:
   extras-image-build:
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     uses: ./.github/workflows/image_build.yml
     with:
       tag-latest: ${{ matrix.tag-latest }}
@@ -61,7 +63,11 @@ jobs:
       platforms: ${{ matrix.platforms }}
       runs-on: ${{ matrix.runs-on }}
     secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
       dockerUsername: ${{ secrets.DOCKERHUB_USERNAME }}
+      dockerPassword: ${{ secrets.GITHUB_TOKEN }}
+      quayUsername: ${{ secrets.LOCALAI_REGISTRY_USERNAME }}
+      quayPassword: ${{ secrets.LOCALAI_REGISTRY_PASSWORD }}
       dockerPassword: ${{ secrets.DOCKERHUB_PASSWORD }}
       quayUsername: ${{ secrets.LOCALAI_REGISTRY_USERNAME }}
       quayPassword: ${{ secrets.LOCALAI_REGISTRY_PASSWORD }}
