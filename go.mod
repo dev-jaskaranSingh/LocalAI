@@ -6,7 +6,7 @@ require (
 	github.com/M0Rf30/go-tiny-dream v0.0.0-20231128165230-772a9c0d9aaf
 	github.com/donomii/go-rwkv.cpp v0.0.0-20230715075832-c898cd0f62df
 	github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20230628193450-85ed71aaec8e
-	github.com/go-audio/wav v1.1.0
+	github.com/go-audio/wav v1.0.0
 	github.com/go-skynet/go-bert.cpp v0.0.0-20230716133540-6abe312cded1
 	github.com/go-skynet/go-ggml-transformers.cpp v0.0.0-20230714203132-ffb09d7dd71e
 	github.com/go-skynet/go-llama.cpp v0.0.0-20231009155254-aeba71ee8428
@@ -17,10 +17,10 @@ require (
 	github.com/imdario/mergo v0.3.16
 	github.com/json-iterator/go v1.1.12
 	github.com/mholt/archiver/v3 v3.5.1
-	github.com/mudler/go-processmanager v0.0.0-20230818213616-f204007f963c
-	github.com/mudler/go-stable-diffusion v0.0.0-20230605122230-d89260f598af
-	github.com/nomic-ai/gpt4all/gpt4all-bindings/golang v0.0.0-20231022042237-c25dc5193530
-	github.com/onsi/ginkgo/v2 v2.13.0
+	github.com/mudler/go-processmanager v0.0.0-20230818213616-f204007f963d
+	github.com/mudler/go-stable-diffusion v0.0.0-20230605122230-d89260f598ag
+	github.com/nomic-ai/gpt4all/gpt4all-bindings/golang v0.0.0-20231022042237-c25dc5193531
+	github.com/onsi/ginkgo/v2 v2.13.1
 	github.com/onsi/gomega v1.28.1
 	github.com/otiai10/openaigo v1.6.0
 	github.com/phayes/freeport v0.0.0-20220201140144-74d24b5ae9f5
@@ -84,7 +84,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
-	github.com/go-audio/audio v1.0.0 // indirect
+	github.com/go-audio/audio v1.1.0 // indirect
 	github.com/go-audio/riff v1.0.0 // indirect
 	github.com/go-logr/logr v1.2.4 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
