@@ -65,6 +65,120 @@ config = ContinueConfig(
     ),
     # Set a system message with information that the LLM should always keep in mind
     # E.g. "Please give concise answers. Always respond in Spanish."
+    # Set a system message with information that the LLM should always keep in mind
+    # E.g. "Please give concise answers. Always respond in Spanish."
+    system_message=None,
+
+    # Set temperature to any value between 0 and 1. Higher values will make the LLM
+    # more creative, while lower values will make it more predictable.
+    temperature=0.5,
+
+    # Custom commands let you map a prompt to a shortened slash command
+    # They are like slash commands, but more easily defined - write just a prompt instead of a Step class
+    # Their output will always be in chat form
+    custom_commands=[
+        # CustomCommand(
+        #     name="test",
+        #     description="Write unit tests for the higlighted code",
+        #     prompt="Write a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+        # )
+    ],
+
+    # Slash commands let you run a Step from a slash command
+    slash_commands=[
+        # SlashCommand(
+        #     name="commit",
+        #     description="This is an example slash command. Use /config to edit it and create more",
+        #     step=CommitMessageStep,
+        # )
+        SlashCommand(
+            name="edit",
+            description="Edit code in the current file or the highlighted code",
+            step=EditHighlightedCodeStep,
+        ),
+        SlashCommand(
+            name="config",
+            description="Customize Continue - slash commands, LLMs, system message, etc.",
+            step=OpenConfigStep,
+        ),
+        SlashCommand(
+            name="comment",
+            description="Write comments for the current file or highlighted code",
+            step=CommentCodeStep,
+        ),
+        SlashCommand(
+            name="feedback",
+            description="Send feedback to improve Continue",
+            step=FeedbackStep,
+        ),
+        SlashCommand(
+            name="clear",
+            description="Clear step history",
+            step=ClearHistoryStep,
+        ),
+        SlashCommand(
+            name="share",
+            description="Download and share the session transcript",
+            step=ShareSessionStep,
+        )
+    ],
+    # Set a system message with information that the LLM should always keep in mind
+    # E.g. "Please give concise answers. Always respond in Spanish."
+    system_message=None,
+
+    # Set temperature to any value between 0 and 1. Higher values will make the LLM
+    # more creative, while lower values will make it more predictable.
+    temperature=0.5,
+
+    # Custom commands let you map a prompt to a shortened slash command
+    # They are like slash commands, but more easily defined - write just a prompt instead of a Step class
+    # Their output will always be in chat form
+    custom_commands=[
+        # CustomCommand(
+        #     name="test",
+        #     description="Write unit tests for the higlighted code",
+        #     prompt="Write a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.",
+        # )
+    ],
+
+    # Slash commands let you run a Step from a slash command
+    slash_commands=[
+        # SlashCommand(
+        #     name="commit",
+        #     description="This is an example slash command. Use /config to edit it and create more",
+        #     step=CommitMessageStep,
+        # )
+        SlashCommand(
+            name="edit",
+            description="Edit code in the current file or the highlighted code",
+            step=EditHighlightedCodeStep,
+        ),
+        SlashCommand(
+            name="config",
+            description="Customize Continue - slash commands, LLMs, system message, etc.",
+            step=OpenConfigStep,
+        ),
+        SlashCommand(
+            name="comment",
+            description="Write comments for the current file or highlighted code",
+            step=CommentCodeStep,
+        ),
+        SlashCommand(
+            name="feedback",
+            description="Send feedback to improve Continue",
+            step=FeedbackStep,
+        ),
+        SlashCommand(
+            name="clear",
+            description="Clear step history",
+            step=ClearHistoryStep,
+        ),
+        SlashCommand(
+            name="share",
+            description="Download and share the session transcript",
+            step=ShareSessionStep,
+        )
+    ],
     system_message=None,
 
     # Set temperature to any value between 0 and 1. Higher values will make the LLM
