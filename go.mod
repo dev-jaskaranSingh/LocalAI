@@ -5,11 +5,11 @@ go 1.21
 require (
 	github.com/M0Rf30/go-tiny-dream v0.0.0-20231128165230-772a9c0d9aaf
 	github.com/donomii/go-rwkv.cpp v0.0.0-20230715075832-c898cd0f62df
-	github.com/ggerganov/whisper.cpp/bindings/go v0.0.0-20230628193450-85ed71aaec8e
+	github.com/ggerganov/whisper.cpp/bindings/go v1.0.0-20231201081500-85ed71aaec8e
 	github.com/go-audio/wav v1.1.0
-	github.com/go-skynet/go-bert.cpp v0.0.0-20230716133540-6abe312cded1
-	github.com/go-skynet/go-ggml-transformers.cpp v0.0.0-20230714203132-ffb09d7dd71e
-	github.com/go-skynet/go-llama.cpp v0.0.0-20231009155254-aeba71ee8428
+	github.com/go-skynet/go-bert.cpp v1.2.0-20231201081500-6abe312cded1
+	github.com/go-skynet/go-ggml-transformers.cpp v2.0.0-20231201081500-ffb09d7dd71e
+	github.com/go-skynet/go-llama.cpp v1.5.0-20231201081500-aeba71ee8428
 	github.com/gofiber/fiber/v2 v2.50.0
 	github.com/google/uuid v1.3.1
 	github.com/hashicorp/go-multierror v1.1.1
@@ -18,7 +18,7 @@ require (
 	github.com/json-iterator/go v1.1.12
 	github.com/mholt/archiver/v3 v3.5.1
 	github.com/mudler/go-processmanager v0.0.0-20230818213616-f204007f963c
-	github.com/mudler/go-stable-diffusion v0.0.0-20230605122230-d89260f598af
+	github.com/mudler/go-stable-diffusion v1.0.0-20231201081500-d89260f598af
 	github.com/nomic-ai/gpt4all/gpt4all-bindings/golang v0.0.0-20231022042237-c25dc5193530
 	github.com/onsi/ginkgo/v2 v2.13.0
 	github.com/onsi/gomega v1.28.1
