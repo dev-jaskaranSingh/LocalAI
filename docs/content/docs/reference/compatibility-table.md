@@ -6,7 +6,7 @@ weight = 24
 url = "/model-compatibility/"
 +++
 
-Besides llama based models, LocalAI is compatible also with other architectures. The table below lists all the compatible models families and the associated binding repository.
+Besides llama based models, LocalAI is compatible also with other architectures. The table below lists all the compatible model families updated with new dependencies and versions and the associated binding repository.
 
 {{% alert note %}}
 
@@ -14,7 +14,7 @@ LocalAI will attempt to automatically load models which are not explicitly confi
 
 {{% /alert %}}
 
-| Backend and Bindings                                                             | Compatible models     | Completion/Chat endpoint | Capability | Embeddings support                | Token stream support | Acceleration |
+| Backend and Bindings                                                             | Models updated with new compatibility and versions     | Completion/Chat endpoint | Capability | Embeddings support                | Token stream support | Acceleration |
 |----------------------------------------------------------------------------------|-----------------------|--------------------------|---------------------------|-----------------------------------|----------------------|--------------|
 | [llama.cpp]({{%relref "docs/features/text-generation#llama.cpp" %}})        | Vicuna, Alpaca, LLaMa | yes                      | GPT and Functions                        | yes** | yes                  | CUDA, openCL, cuBLAS, Metal |
 | [gpt4all-llama](https://github.com/nomic-ai/gpt4all)      | Vicuna, Alpaca, LLaMa | yes                      | GPT                        | no                                | yes                  | N/A  |
@@ -46,8 +46,10 @@ LocalAI will attempt to automatically load models which are not explicitly confi
 | `exllama2`  | GPTQ                   | yes                       | GPT only                  | no                               | no                   | N/A |
 | `transformers-musicgen`  |                    | no                       | Audio generation                | no                               | no                   | N/A |
 | [tinydream](https://github.com/symisc/tiny-dream#tiny-dreaman-embedded-header-only-stable-diffusion-inference-c-librarypixlabiotiny-dream)         | stablediffusion               | no                       | Image                 | no                                | no                   | N/A |
-| `coqui` | Coqui    | no                       | Audio generation and Voice cloning    | no                               | no                   | CPU/CUDA |
-| `petals` | Various GPTs and quantization formats | yes                      | GPT             | no | no                  | CPU/CUDA |
+| `coqui target
+| `coqui"` | Coqui    | no                       | Audio generation and Voice cloning    | no                               | no                   | CPU/CUDA |
+| `PETALS
+| [petals` | Various GPTs and quantization formats | yes                      | GPT             | no | no                  | CPU/CUDA |
 
 Note: any backend name listed above can be used in the `backend` field of the model configuration file (See [the advanced section]({{%relref "docs/advanced" %}})).
 
