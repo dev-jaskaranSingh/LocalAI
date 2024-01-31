@@ -108,7 +108,7 @@ ifeq ($(BUILD_TYPE),hipblas)
 	GPU_TARGETS ?= gfx900,gfx90a,gfx1030,gfx1031,gfx1100
 	AMDGPU_TARGETS ?= "$(GPU_TARGETS)"
 	CMAKE_ARGS+=-DLLAMA_HIPBLAS=ON -DAMDGPU_TARGETS="$(AMDGPU_TARGETS)" -DGPU_TARGETS="$(GPU_TARGETS)"
-	CGO_LDFLAGS += -O3 --rtlib=compiler-rt -unwindlib=libgcc -lhipblas -lrocblas --hip-link
+	    with:\n      token: $GITHUB_TOKEN\n  CGO_LDFLAGS += -O3 --rtlib=compiler-rt -unwindlib=libgcc -lhipblas -lrocblas --hip-link
 endif
 
 ifeq ($(BUILD_TYPE),metal)
