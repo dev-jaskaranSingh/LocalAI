@@ -13,7 +13,6 @@ CPPLLAMA_VERSION?=2aed77eb06a329f0d82bb1c467f4244904d4073f
 # gpt4all version
 GPT4ALL_REPO?=https://github.com/nomic-ai/gpt4all
 GPT4ALL_VERSION?=27a8b020c36b0df8f8b82a252d261cda47cf44b8
-
 # go-ggml-transformers version
 GOGGMLTRANSFORMERS_VERSION?=NEW_VERSION
 
