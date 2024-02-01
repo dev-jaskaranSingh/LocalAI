@@ -44,7 +44,7 @@ jobs:
             branch: "master"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - name: Bump dependencies 🔧
         run: |
           bash .github/bump_deps.sh ${{ matrix.repository }} ${{ matrix.branch }} ${{ matrix.variable }}
@@ -57,7 +57,22 @@ jobs:
           title: ':arrow_up: Update ${{ matrix.repository }}'
           branch: "update/${{ matrix.variable }}"
           body: Bump of ${{ matrix.repository }} version
-          signoff: true
+          signoff: true- name: Check out repository
+  uses: actions/checkout@v2
+  with:
+    persist-credentials: false
+    fetch-depth: 0
+- name: Set up Python 3.8
+  uses: actions/setup-python@v2
+  with:
+    python-version: 3.8
+- name: Install dependencies
+  run: |
+    pip install -r requirements.txt
+    pip install -r test-requirements.txt
+- name: Run tests
+  run: |
+    pytest
 
 
 
