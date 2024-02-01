@@ -4,34 +4,34 @@ GOVET=$(GOCMD) vet
 BINARY_NAME=local-ai
 
 # llama.cpp versions
-GOLLAMA_VERSION?=aeba71ee842819da681ea537e78846dc75949ac0
+GOLLAMA_VERSION?=new_valid_version
 
-GOLLAMA_STABLE_VERSION?=50cee7712066d9e38306eccadcfbb44ea87df4b7
+GOLLAMA_STABLE_VERSION?=new_valid_version
 
-CPPLLAMA_VERSION?=2aed77eb06a329f0d82bb1c467f4244904d4073f
+CPPLLAMA_VERSION?=new_valid_version
 
 # gpt4all version
 GPT4ALL_REPO?=https://github.com/nomic-ai/gpt4all
-GPT4ALL_VERSION?=27a8b020c36b0df8f8b82a252d261cda47cf44b8
+GPT4ALL_VERSION?=new_valid_version
 
 # go-ggml-transformers version
-GOGGMLTRANSFORMERS_VERSION?=ffb09d7dd71e2cbc6c5d7d05357d230eea6f369a
+GOGGMLTRANSFORMERS_VERSION?=new_valid_version
 
 # go-rwkv version
 RWKV_REPO?=https://github.com/donomii/go-rwkv.cpp
-RWKV_VERSION?=633c5a3485c403cb2520693dc0991a25dace9f0f
+RWKV_VERSION?=new_valid_version
 
 # whisper.cpp version
-WHISPER_CPP_VERSION?=37a709f6558c6d9783199e2b8cbb136e1c41d346
+WHISPER_CPP_VERSION?=new_valid_version
 
 # bert.cpp version
-BERT_VERSION?=6abe312cded14042f6b7c3cd8edf082713334a4d
+BERT_VERSION?=new_valid_version
 
 # go-piper version
-PIPER_VERSION?=d6b6275ba037dabdba4a8b65dfdf6b2a73a67f07
+PIPER_VERSION?=new_valid_version
 
 # stablediffusion version
-STABLEDIFFUSION_VERSION?=902db5f066fd137697e3b69d0fa10d4782bd2c2f
+STABLEDIFFUSION_VERSION?=new_valid_version
 
 # tinydream version
 TINYDREAM_VERSION?=772a9c0d9aaf768290e63cca3c904fe69faf677a
