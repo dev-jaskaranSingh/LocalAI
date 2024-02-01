@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          push-to-fork: ci-forks/LocalAI
+          commit-message: ":arrow_up: Update ggerganov/whisper.cpp"
+          title: ":arrow_up: Update ggerganov/whisper.cpp"
+          branch: update/WHISPER_CPP_VERSION
+          body: "Bump of ggerganov/whisper.cpp version"
+          signoff: true
+          committer: GitHub <noreply@github.com>
+          author: jaskaran-5ingh <jaskaran-5ingh@users.noreply.github.com>
+          delete-branch: false
+          draft: false
